@@ -8,8 +8,9 @@ module.exports = {
         if(!text) throw "text not provided"
         if(!(typeof text == "string")) throw "improper text type"
         let simp = await this.simplify(text)
+        
         return {
-            totalLetters: simp.replace(" ","").length,
+            totalLetters: simp.replace(/ /g,"").length,
             totalWords: simp.split(" ").filter((e) => e != "").length,
             uniqueWords: simp.split(" ").filter((elem, index, arr) => (elem !== "" && arr.indexOf(elem) == index)).length,
             longWords: simp.split(" ").filter((word) => word.length > 5).length,

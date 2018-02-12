@@ -134,5 +134,9 @@ async function test(){
     await console.log("6) testing createMetrics with just numbers")
     try {console.log(await tm.createMetrics("68    95959 020239 8484"))} catch (err) {console.log(err)}
     await console.log()
+
+    await console.log("7) testing createMetrics with easily verifiable stuff")
+    try {console.log(await tm.createMetrics("testing testing testing testing"))} catch (err) {console.log(err)}
+    await console.log()
 }
 test()
