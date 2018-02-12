@@ -136,7 +136,7 @@ async function test(){
     await console.log()
 
     await console.log("7) testing createMetrics with easily verifiable stuff")
-    try {console.log(await tm.createMetrics("testing testing testing testing"))} catch (err) {console.log(err)}
+    try {console.log(await tm.createMetrics("testing testing *&^(*&^ )(*&)(*& _)(*&_(*&   )(*)_( testing testing"))} catch (err) {console.log(err)}
     await console.log()
 }
 test()
