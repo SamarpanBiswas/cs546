@@ -1,0 +1,15 @@
+{
+  "name": "cs-546-lab-3",
+  "version": "1.0.0",
+  "description": "Asynchronous Code, Files, and Promises",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test.js",
+    "start": "node app.js"
+  },
+  "author": "Khayyam Saleem",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1"
+  }
+}
