@@ -3,3 +3,4 @@ lecture_code
 node_modules
 data/db/*
 sb
+.DS_STORE
