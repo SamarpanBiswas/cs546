@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express()
-const configRoutes = require("./routes")
+const configRoutes = require("./routes/index")
 
 configRoutes(app)
 
