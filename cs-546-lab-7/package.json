@@ -1,0 +1,12 @@
+{
+  "name": "cs-546-lab-7",
+  "version": "1.0.0",
+  "description": "a recipe api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Khayyam Saleem",
+  "license": "ISC"
+}
