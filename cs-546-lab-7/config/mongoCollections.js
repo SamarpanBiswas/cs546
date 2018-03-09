@@ -7,7 +7,7 @@ const getCollectionFn = collection => {
             const db = await dbc()
             _col = await db.collection(collection)
         }
-        return _col.
+        return _col
     }
 }
 
