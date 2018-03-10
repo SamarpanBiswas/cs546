@@ -7,7 +7,7 @@ let _db = undefined
 
 module.exports = async () => {
     if (!_conn){
-        _conn = await mli.connect(dbUrl)
+        _conn = await mcli.connect(dbUrl)
         _db = await _conn.db(config.database)
     }
     return _db

@@ -3,14 +3,12 @@ const recipes = mongoCollections.recipes
 const u = require("node-uuid")
 
 async function getAllRecipes() {
-    console.log("here")
     const r = await recipes()
-    console.log(r)
-    return await r.find({}).toArray()
+    return (await r.find({}).toArray()).map(o => { return  {_id: o._id, title:o.title} })
 }
 
 async function getRecipe(id){
-    if (!id || typeof(id) !== 'string') throw "Invalid value passed for id"
+    if (!id || typeof id !== 'string') throw "Invalid value passed for id"
     const r = await (await recipes()).findOne({_id: id})
     if (!r) throw "Recipe not found"
     return r
@@ -22,7 +20,7 @@ async function postRecipe(title, ingredients, steps){
 
     if (!ingredients || !Array.isArray(ingredients)) throw "Invalid ingredients list format"
 
-    for (const ingredient of updatedRecipe.ingredients)
+    for (const ingredient of ingredients)
       if (!ingredient.name || !ingredient.amount)
         throw "Each ingredient must have a name and an amount"
 
@@ -36,7 +34,8 @@ async function postRecipe(title, ingredients, steps){
     }
 
     const rcol = await recipes()
-    return await getRecipe(await rcol.insertOne(newRecipe)).insertedId
+    const { insertedId } = await rcol.insertOne(newRecipe)
+    return await getRecipe(insertedId)
 }
 
 async function putRecipe(id, updatedRecipe) {
@@ -78,10 +77,9 @@ async function patchRecipe(id, updated){
             throw "Invalid steps passed"
         updated_info.steps = updated.steps
     }
-
     await (await recipes()).updateOne({_id: id}, {$set : updated_info})
 
-    return getRecipe(id)
+    return await getRecipe(id)
 }
 
 async function deleteRecipe(id){

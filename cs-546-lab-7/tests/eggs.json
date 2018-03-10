@@ -1,0 +1,5 @@
+{
+    "title": "Eggs",
+    "ingredients": [{"name": "egg", "amount": "2 eggs"}, {"name":"milk", "amount":"1 milk"}],
+    "steps": ["crack eggs", "add milk", "cook eggs"]
+}

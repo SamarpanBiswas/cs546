@@ -1,0 +1,5 @@
+{
+    "title": "world's best water",
+    "ingredients": [{"name":"hydrogen", "amount":"2 atoms"}, {"name":"oxygen", "amount":"1 atom"}],
+    "steps": ["add hydrogen", "add oxygen", "bond", "drink"]
+}

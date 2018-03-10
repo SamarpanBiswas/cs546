@@ -9,9 +9,9 @@ const recipeData = data.recipes
 router.get("/", async (req,res) => {
     try {
         const list = await recipeData.getAllRecipes()
-        res.status(200).end()
+        res.status(200).json(list)
     } catch (e) {
-        res.status(500).send()
+        res.status(500).json({err: e})
     }
 })
 
@@ -20,7 +20,7 @@ router.get("/", async (req,res) => {
 router.get("/:id", async (req, res) => {
     try {
         const r = await recipeData.getRecipe(req.params.id)
-        res.status(200).end()
+        res.status(200).json(r)
     } catch (e) {
         res.status(404).json({message: "recipe not found"})
     }
@@ -28,10 +28,12 @@ router.get("/:id", async (req, res) => {
 
 //handler for POST /recipes
 //creates new recipe with data in request body
-router.post("/:id", async (req, res) => {
+router.post("/", async (req, res) => {
     try {
         const r = req.body
+        console.log(r)
         const newR = await recipeData.postRecipe(r.title, r.ingredients, r.steps)
+        console.log(newR)
         res.status(200).end()
     } catch (e) {
         res.status(500).json({err: e})
@@ -43,7 +45,7 @@ router.post("/:id", async (req, res) => {
 router.put("/:id", async (req,res) => {
     try {
         const updated = await recipeData.putRecipe(req.params.id, req.body)
-        res.status(200).end()
+        res.status(200).json(updated)
     } catch (e) {
         res.status(500).json({err: e})
     }
@@ -54,8 +56,8 @@ router.put("/:id", async (req,res) => {
 //returns updated recipe
 router.patch("/:id", async (req, res) => {
     try {
-        const updated = await recipeData.patchRecipe(rec.params.id, req.body)
-        res.status(200).end()
+        const updated = await recipeData.patchRecipe(req.params.id, req.body)
+        res.status(200).json(updated)
     } catch (e) {
         res.status(500).json({err: e})
     }

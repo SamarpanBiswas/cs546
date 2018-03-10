@@ -1,0 +1,5 @@
+{
+    "title":"fire",
+    "ingredients":[5, {"name":"oxygen","amount":"as much as required"}],
+    "steps": ["friction", "patience", "enjoy"]
+}
