@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Results from Palindrome Checker</title>
+        <link rel="stylesheet" href="../../public/site.css">
+    </head>
+    <body>
+        <h1>Results from Palindrome Checker</h1>
+        <main>
+        {{#if is_pal}}
+            <p class="success"> {{check}} </p>
+            <p>It's a palindrome.</p>
+        {{else}}
+            <p class="failure"> {{check}} </p>
+            <p>It's not a palindrome.</p>
+        {{/if}}
+            <a href="/" class="retry" >Try another palindrome</a>
+        </main>
+    </body>
+</html>

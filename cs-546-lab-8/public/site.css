@@ -1,0 +1,36 @@
+body {
+    font-size: 14pt
+}
+
+main {
+    max-width: 75%;
+    margin: auto
+}
+
+header {
+    border-bottom: 1px solid #afafaf
+}
+
+h1 {
+    font-size: 2rem
+}
+
+p {
+    font-size: 1rem
+}
+
+label {
+    font-weight: bold
+}
+
+.error {
+    color: #ff0000
+}
+
+.success {
+    color: #28a745
+}
+
+.failure {
+    color: #dc3545
+}
