@@ -1,0 +1,26 @@
+{
+  "name": "cs546",
+  "version": "1.0.0",
+  "description": "Client side palindrome checker",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khayyamsaleem/cs546.git"
+  },
+  "author": "Khayyam Saleem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khayyamsaleem/cs546/issues"
+  },
+  "homepage": "https://github.com/khayyamsaleem/cs546#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.11"
+  }
+}

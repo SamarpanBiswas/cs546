@@ -1,0 +1,58 @@
+.is-palindrome {
+    color: #0000FF;
+}
+
+.not-palindrome {
+    color: #FF0000;
+}
+
+body {
+    background: #fefefe;
+    font-family: "Comic Sans MS", Cambria, "Times New Roman", Times, serif;
+    font-size: 13pt;
+}
+
+main {
+    max-width: 75%;
+    margin: auto;
+}
+
+header {
+    border-bottom: 1px solid #afafaf;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 2;
+}
+
+label {
+    font-weight: bold;
+}
+
+.error {
+    color: #ff0000;
+}
+
+
+footer {
+    border-bottom: 1px solid #afafaf;
+}
+
+.btn {
+    background-color: #afafaf; /* Green */
+    border: none;
+    color: white;
+    display: inline-block;
+    font-size: 14px;
+}
+
+
+
+.btn:hover {
+    font-style: normal;
+}
